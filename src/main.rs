@@ -96,6 +96,7 @@ fn readfile(filepath: &str, arg_list: Vec<&str>) {
                 if arg_list.contains(&"show-tabs") {
                     text = line_text.replace("\t", "^I");
                 } else {
+                    // TODO: make this work without .replace("", "")
                     text = line_text.replace("", "");
                 }
 
