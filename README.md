@@ -17,11 +17,11 @@ Concatenate FILE to standard output
 
 <h2>Examples:</h2>
 ```
-# using cargo
+# cargo
 $ cargo run -- test_files/test.txt
 $ cargo run -- -T test_files/tab_test.txt
 
-# using binary
+# binary
 $ rustcat test_files/test.txt
 $ rustcat --show-ends test_files/test.csv
 ```
@@ -30,10 +30,10 @@ $ rustcat --show-ends test_files/test.csv
 rustcat currently only accepts multiple arguments using
 the following syntax:
 ```
-# using cargo
+# cargo
 $ cargo run -- -b -T test_files/tab_test.txt
 
-# using binary
+# binary
 $ rustcat -E -n test_files/test.txt
 ```
 Support for multiple arguments using only one '-' will
