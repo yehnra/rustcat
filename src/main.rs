@@ -20,6 +20,7 @@ fn main() {
     if args.len() < 2 {
         output_help();
     } else if args.len() > 10 {
+        // arbitrary maximum amount of args
         println!("{}Too many arguments.", LABEL);
         return;
     } else {
