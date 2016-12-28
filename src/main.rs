@@ -68,16 +68,6 @@ fn parse_args(args: &Vec<String>) -> (Vec<&str>, bool, bool){
     (arg_list, help_mode, version_mode)
 }
 
-// opens and returns the file
-fn open_file(path: &Path) -> File {
-    let display = path.display();
-
-    match File::open(&path) {
-        Err(why) => panic!("{}couldn't open {}: {}", LABEL, display, why.description()),
-        Ok(file) => file,
-    }
-}
-
 fn readfile(filepath: &str, arg_list: Vec<&str>) {
     // create path to file
     let path = Path::new(filepath);
@@ -88,43 +78,54 @@ fn readfile(filepath: &str, arg_list: Vec<&str>) {
     // read file contents into string
     match file.read_to_string(&mut s) {
         Err(why) => panic!("{}couldn't read {}: {}", LABEL, display, why.description()),
-        Ok(_) => {
-            // TODO: probably refactor this bit
-            //println!("{}{}:", LABEL, display);    // display filename
-            let lines = s.lines();
-            let mut whitespace_count = 0;
-            let mut text;
-
-            for (line_number, line_text) in lines.enumerate() {
-                if arg_list.contains(&"show-tabs") {
-                    text = line_text.replace("\t", "^I");
-                } else {
-                    // TODO: make this work without .replace("", "")
-                    text = line_text.replace("", "");
-                }
-
-                if arg_list.contains(&"numbers") && !arg_list.contains(&"number-nonblank") {
-                    print!("{}\t", line_number + 1);
-                }
-
-                if arg_list.contains(&"number-nonblank") {
-                    if line_text != "" {
-                        print!("{}\t", line_number - whitespace_count + 1);
-                    } else {
-                        whitespace_count = whitespace_count + 1;
-                    }
-                }
-
-                print!("{}", text);
-
-                if arg_list.contains(&"show-ends") {
-                    print!("$");
-                }
-
-                println!();
-            }
-        },
+        Ok(_) => rustcat(s, arg_list),
     };
+}
+
+fn rustcat(s: String, arg_list: Vec<&str>) {
+    // TODO: probably refactor this bit
+    let lines = s.lines();
+    let mut whitespace_count = 0;
+    let mut text;
+
+    for (line_number, line_text) in lines.enumerate() {
+        if arg_list.contains(&"show-tabs") {
+            text = line_text.replace("\t", "^I");
+        } else {
+            // TODO: make this work without .replace("", "")
+            text = line_text.replace("", "");
+        }
+
+        if arg_list.contains(&"numbers") && !arg_list.contains(&"number-nonblank") {
+            print!("{}\t", line_number + 1);
+        }
+
+        if arg_list.contains(&"number-nonblank") {
+            if line_text != "" {
+                print!("{}\t", line_number - whitespace_count + 1);
+            } else {
+                whitespace_count = whitespace_count + 1;
+            }
+        }
+
+        print!("{}", text);
+
+        if arg_list.contains(&"show-ends") {
+            print!("$");
+        }
+
+        println!();
+    }
+}
+
+// opens and returns the file
+fn open_file(path: &Path) -> File {
+    let display = path.display();
+
+    match File::open(&path) {
+        Err(why) => panic!("{}couldn't open {}: {}", LABEL, display, why.description()),
+        Ok(file) => file,
+    }
 }
 
 // version info
