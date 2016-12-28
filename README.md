@@ -1,5 +1,4 @@
-<h1>rustcat</h1>
-<h4>rustcat is a Rust 1.14 implementation of cat(1) using only std.</h4>
+<h1>rustcat - <h4>rustcat is a Rust 1.14 implementation of cat(1) using only std.</h4></h1>
 rustcat is still a work-in-progress (see TODO's in src/main.rs),
 however, all of the following functionality works:
 
