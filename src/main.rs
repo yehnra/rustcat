@@ -2,7 +2,7 @@
 // TODO: cat arguments: -A, -e, -s -t, -v
 // TODO: move help and version text to separate files
 // TODO: more comments
-// TODO: interactive cat, like when you run cat with no args in bash
+// TODO: "interactive cat" (like when you run cat with no args in bash)
 
 use std::env;
 use std::error::Error;
