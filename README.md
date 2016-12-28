@@ -21,7 +21,7 @@ Version and licensing info:
 [rustcat 0.1.1]
 Copyright (C) 2016 Baerlabs
 License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
-rustcat is free to use, study, change, and redistribute
+rustcat is free to use, study, change, and redistribute.
 There is no warranty, to the extent permitted by law.
 
 Written by yehnra
