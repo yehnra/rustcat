@@ -15,3 +15,15 @@ Concatenate FILE to standard output
 This is still a work-in-progress (see TODO's in src/main.rs).
 rustcat is a Rust 1.14 implementation of cat(1) using only std.
 
+Version and licensing info:
+
+```
+[rustcat 0.1.1]
+Copyright (C) 2016 Baerlabs
+License GPLv3: GNU GPL version 3 \<http://gnu.org/licenses/gpl.html\>
+rustcat is free to use, study, change, and redistribute
+There is no warranty, to the extent permitted by law.
+
+Written by yehnra
+
+```
