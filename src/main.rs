@@ -87,7 +87,6 @@ fn readfile(filepath: &str, arg_list: Vec<&str>) {
         Ok(_) => {
             // TODO: probably refactor this bit
             //println!("{}{}:", LABEL, display);    // display filename
-
             let lines = s.lines();
             let mut whitespace_count = 0;
             let mut text;
