@@ -134,7 +134,7 @@ fn output_version() {
     println!("\n[rustcat {}]", VERSION);
     println!("Copyright (C) 2016 Baerlabs");
     println!("License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>");
-    println!("rustcat is free to use, study, change, and redistribute.");
+    println!("rustcat is free to use, study, change, and/or redistribute.");
     println!("There is no warranty, to the extent permitted by law.");
     println!("\nWritten by yehnra");
     println!();
