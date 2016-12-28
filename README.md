@@ -15,6 +15,30 @@ Concatenate FILE to standard output
 	  --version            output version information and exit
 ```
 
+<h3>Examples:</h3>
+```
+# using cargo
+$ cargo run -- test_files/test.txt
+$ cargo run -- -T test_files/tab_test.txt
+
+# using binary
+$ rustcat test_files/test.txt
+$ rustcat --show-ends test_files/test.csv
+```
+
+<h4>Note:</h4>
+rustcat currently only accepts multiple arguments using
+the following syntax:
+```
+# using cargo
+$ cargo run -- -b -T test_files/tab_test.txt
+
+# using binary
+$ rustcat -E -n test_files/test.txt
+```
+Support for multiple arguments using only one '-' will
+be added eventually.
+
 Version and licensing info:
 
 ```
