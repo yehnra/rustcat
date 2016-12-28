@@ -68,17 +68,21 @@ fn parse_args(args: &Vec<String>) -> (Vec<&str>, bool, bool){
     (arg_list, help_mode, version_mode)
 }
 
+// opens and returns the file
+fn open_file(path: &Path) -> File {
+    let display = path.display();
+
+    match File::open(&path) {
+        Err(why) => panic!("{}couldn't open {}: {}", LABEL, display, why.description()),
+        Ok(file) => file,
+    }
+}
+
 fn readfile(filepath: &str, arg_list: Vec<&str>) {
     // create path to file
     let path = Path::new(filepath);
     let display = path.display();
-
-    // open file
-    let mut file = match File::open(&path) {
-        Err(why) => panic!("{}couldn't open {}: {}", LABEL, display, why.description()),
-        Ok(file) => file,
-    };
-
+    let mut file = open_file(path);
     let mut s = String::new();
 
     // read file contents into string
