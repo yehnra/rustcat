@@ -1,15 +1,19 @@
 <h1>Rustcat</h1>
-<p>[rustcat]</p>
-<p>Usage: rustcat [OPTION]... [FILE]</p>
-<!--
-    println!("\n{}", LABEL);
-    println!("Usage: rustcat [OPTION]... [FILE]");
-    println!("Concatenate FILE to standard output\n");
-    println!("  -b, --number-nonblank\t\tnumber nonempty output lines, overrides -n");
-    println!("  -n, --number\t\t\tnumber all output lines");
-    println!("  -E, --show-ends\t\tdisplay $ at end of each line");
-    println!("  -T, --show-tabs\t\tdisplay TAB characters as ^I");
-    println!("      --help\t\t\tdisplay this help and exit");
-    println!("      --version\t\t\toutput version information and exit");
- 
- -->
+<code>
+[rustcat]
+Usage: rustcat [OPTION]... [FILE]
+Concatenate FILE to standard output
+  -b, --number-nonblank    number nonempty output lines, overrides -n
+  -n, --number             number all output lines
+  -E, --show-ends          display $ at end of each line
+  -T, --show-tabs          display TAB characters as ^I
+      --help               display this help and exit
+	  --version            output version information and exit
+</code>
+<p>
+This is still a work-in-progress (see TODO's in src/main.rs).
+</p>
+<p>
+rustcat is a Rust 1.14 implementation of cat(1) using only std.
+</p>
+
