@@ -3,6 +3,7 @@
 // TODO: move help and version text to separate files
 // TODO: more comments
 // TODO: "interactive cat" (like when you run cat with no args in bash)
+// TODO: multiple files
 
 use std::env;
 use std::error::Error;
