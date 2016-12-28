@@ -1,5 +1,6 @@
 <h1>Rustcat</h1>
-<code>
+
+```
 [rustcat]
 Usage: rustcat [OPTION]... [FILE]
 Concatenate FILE to standard output
@@ -9,11 +10,8 @@ Concatenate FILE to standard output
   -T, --show-tabs          display TAB characters as ^I
       --help               display this help and exit
 	  --version            output version information and exit
-</code>
-<p>
+```
+
 This is still a work-in-progress (see TODO's in src/main.rs).
-</p>
-<p>
 rustcat is a Rust 1.14 implementation of cat(1) using only std.
-</p>
 
