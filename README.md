@@ -1,5 +1,5 @@
 <h1>rustcat</h1>
-<h2>A Rust 1.14 implementation of cat(1) using only std.</h2>
+<h4>A Rust 1.14 implementation of cat(1) using only std.</h4>
 rustcat is still a work-in-progress (see TODO's in src/main.rs),
 however, all of the following functionality works:
 
@@ -15,7 +15,7 @@ Concatenate FILE to standard output
 	  --version            output version information and exit
 ```
 
-<h3>Examples:</h3>
+<h2>Examples:</h2>
 ```
 # using cargo
 $ cargo run -- test_files/test.txt
@@ -39,7 +39,7 @@ $ rustcat -E -n test_files/test.txt
 Support for multiple arguments using only one '-' will
 be added eventually.
 
-<h3>Version and licensing info:</h3>
+<h2>Version and licensing info:</h2>
 
 ```
 [rustcat 0.1.2]
