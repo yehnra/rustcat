@@ -39,7 +39,7 @@ $ rustcat -E -n test_files/test.txt
 Support for multiple arguments using only one '-' will
 be added eventually.
 
-Version and licensing info:
+<h3>Version and licensing info:</h3>
 
 ```
 [rustcat 0.1.2]
