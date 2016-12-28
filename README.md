@@ -12,7 +12,9 @@ Concatenate FILE to standard output
 	  --version            output version information and exit
 ```
 
-This is still a work-in-progress (see TODO's in src/main.rs).
+This is still a work-in-progress (see TODO's in src/main.rs),
+but all of the above functionality works.
+
 rustcat is a Rust 1.14 implementation of cat(1) using only std.
 
 Version and licensing info:
