@@ -1,0 +1,5 @@
+this	is	a	file	with	some	tabs
+in	it. it's here to test the --show-tabs option
+
+also putting multiple	lines	so we can
+test the line	numbering	flag as well.

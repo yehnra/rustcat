@@ -1,0 +1,6 @@
+this is a txt file with
+multiple lines
+in it.
+
+there are also several blank lines,
+which can be tested with the -b flag

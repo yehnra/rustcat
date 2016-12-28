@@ -1,0 +1,6 @@
+[package]
+name = "rustcat"
+version = "0.1.1"
+authors = ["Nick <nick@baerlabs.com>"]
+
+[dependencies]
