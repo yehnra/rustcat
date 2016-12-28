@@ -25,5 +25,4 @@ rustcat is free to use, study, change, and redistribute
 There is no warranty, to the extent permitted by law.
 
 Written by yehnra
-
 ```
