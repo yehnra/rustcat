@@ -16,6 +16,7 @@ Concatenate FILE to standard output
 ```
 
 Version and licensing info:
+
 ```
 [rustcat 0.1.1]
 Copyright (C) 2016 Baerlabs
