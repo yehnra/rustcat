@@ -98,12 +98,12 @@ fn rustcat(s: String, arg_list: Vec<&str>) {
         }
 
         if arg_list.contains(&"numbers") && !arg_list.contains(&"number-nonblank") {
-            print!("{}\t", line_number + 1);
+            print!("{}\t", (line_number + 1));
         }
 
         if arg_list.contains(&"number-nonblank") {
             if line_text != "" {
-                print!("{}\t", line_number - whitespace_count + 1);
+                print!("{}\t", (line_number - whitespace_count + 1));
             } else {
                 whitespace_count = whitespace_count + 1;
             }
