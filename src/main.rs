@@ -37,7 +37,7 @@ fn main() {
     }
 }
 
-fn parse_args(args: &Vec<String>) -> (Vec<&str>, bool, bool){
+fn parse_args(args: &Vec<String>) -> (Vec<&str>, bool, bool) {
     // TODO: think of some other method to identify flags
     // TODO: make handling help_ and version_mode more logical
     // TODO: handle multiple arguments behind one '-' char
