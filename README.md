@@ -12,7 +12,7 @@ Concatenate FILE to standard output
   -E, --show-ends          display $ at end of each line
   -T, --show-tabs          display TAB characters as ^I
       --help               display this help and exit
-	  --version            output version information and exit
+      --version            output version information and exit
 ```
 
 ## Examples:
